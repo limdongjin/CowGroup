@@ -1,0 +1,33 @@
+<!--<center>-->
+<!--<%=form_tag '/main/save', method: 'post' do %>-->
+<!--    소모임명 : <input type="text" name="gp_name" placeholder="그룹이름을 입력해주세요."><br>-->
+<!--    생성자 : <input type="text" name="creater"><br>-->
+<!--    카테고리 :-->
+<!--    <input type="radio" value="스터디그룹" name="category">스터디 그룹 -->
+<!--    <input type="radio" value="재능기부" name="category">재능기부 <br>-->
+<!--    소모임 설명 :-->
+<!--    <textarea name="content"></textarea>-->
+<!--    패스워드 : <input type="password" name="password"><br>-->
+<!--    <input type="submit">-->
+<!--<% end %>-->
+<!--<center>-->
+    
+<br><br>
+<h1 align=center>소그룹을 생성해주세요! </h1>
+                  
+                     
+<center><%=form_tag '/main/save', method: 'post' do %>
+    <input type="text" name="gp_name" placeholder="소그룹 이름" style="width: 300px;" /><br>
+    <input type="text" name="creater" placeholder="닉네임" style="width: 300px;" /><br>
+    <input type="password" name="password" id="password" placeholder="password" style="width: 300px;" /><br>
+    <textarea name="content" id="message" placeholder="소그룹을 설명해주세요." rows="4" style="width: 500px;"></textarea><br>                   
+                           
+                              
+                              
+    <input type="radio" name="category" value="study" id="male">
+        <label for="male">스터디</label>
+    <input type="radio" name="category" value="talent" id="female">
+        <label for="female">재능기부</label><br>
+
+    <br><input type="submit" value="Enter!" align="center" />
+    <% end %></center>

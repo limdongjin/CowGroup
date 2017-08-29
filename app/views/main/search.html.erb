@@ -1,0 +1,38 @@
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="/assets/lion.png" alt="" /></a>
+					<h1><strong>CowGroup!!</strong></h1>
+					<p>자신만의 소그룹을 만들어 얘기해봅시다.</p>
+					<a href="/main/create" class="button">소그룹생성하기</a><br><br>
+					<a href="/main/mypage" class="button">돌아가기</a>
+				</div>
+			</header>
+
+
+
+		<!-- Main -->
+			<div id="main">
+			    
+                    <section>
+					    <h2>검색된 소모임</h2>
+						<div class="row">
+						    <% @list.each do |l| %>
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="/main/view/<%= l.id %>" class="image fit thumb"><img src="/assets/thumbs/01.jpg" alt="" /></a>
+								<h3><%= l.gp_name %></h3>
+								<p><%= l.content %></p>
+							</article>
+							<% end %>
+						</div>
+					</section>
+			</div>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>

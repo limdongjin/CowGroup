@@ -1,0 +1,33 @@
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="/assets/lion.png" alt="" /></a>
+					<h1><strong>CowGroup!!</strong></h1>
+					<p>자신만의 소그룹을 만들어 얘기해봅시다.</p>
+					<a href="/main/view/<%=@post.id%>" class="button">돌아가기</a>
+				</div>
+			</header>
+         
+            <!-- Main -->
+         <div id="main">
+             <h1><%=@post.title %></h1>
+              <h2><%=@post.content %></h2>
+              
+             <section>
+                <h1>댓글</h1>
+                <% @comment.each do |c| %>
+                <li><%=c.commment%></li>
+                <% end %>
+            </section>
+            <section>
+            <form method="post" action="/main/commentcreate/<%=@post.id %>">
+            <div class="12u$">
+                              <textarea name="comment" id="comment" placeholder="댓글을 달아주세요~" rows="3" style="width:600px;"></textarea>
+                           </div><br>
+                           <div class="12u$">
+                              <ul class="actions">
+                                 <li><input type="submit" value="댓글 달기" class="special" /></li>
+                              </ul>
+            </div></form>
+            </section>
+        </div>
+                     
